@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "C C",
+    "CEC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "tag": "c:cobblestones"
+    },
+    "E": {
+      "item": "furnacology:living_ember"
+    }
+  },
+  "result": {
+    "id": "furnacology:furnace_heart",
+    "count": 1
+  }
+}

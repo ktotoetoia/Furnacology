@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "furnacology:item/magma_cream_sandwich"
+  }
+}

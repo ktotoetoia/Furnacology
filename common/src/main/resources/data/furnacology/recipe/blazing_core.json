@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "furnacology:blazing_core"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "furnacology:ember_core"
+    }
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "furnacology:blazing_core",
+        "furnacology:ember_core"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "BEB",
+    " M "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "E": {
+      "item": "furnacology:ember_core"
+    },
+    "M": {
+      "item": "minecraft:magma_cream"
+    }
+  },
+  "result": {
+    "id": "furnacology:blazing_core",
+    "count": 1
+  }
+}

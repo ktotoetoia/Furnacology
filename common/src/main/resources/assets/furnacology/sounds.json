@@ -1,0 +1,44 @@
+{
+  "block.living_furnace.bite": {
+    "subtitle": "subtitles.furnacology.block.living_furnace.bite",
+    "sounds": [
+      "furnacology:living_furnace_bite1",
+      "furnacology:living_furnace_bite2",
+      "furnacology:living_furnace_bite3",
+      "furnacology:living_furnace_bite4",
+      "furnacology:living_furnace_bite5",
+      "furnacology:living_furnace_bite6",
+      "furnacology:living_furnace_bite7"
+    ]
+  },
+  "block.living_furnace.smelt": {
+    "subtitle": "subtitles.furnacology.block.living_furnace.smelt",
+    "sounds": [
+      "furnacology:living_furnace_smelt1"
+    ]
+  },
+  "block.living_furnace.throw": {
+    "subtitle": "subtitles.furnacology.block.living_furnace.throw",
+    "sounds": [
+      "furnacology:living_furnace_smelt1"
+    ]
+  },
+  "block.living_furnace.blow": {
+    "subtitle": "subtitles.furnacology.block.living_furnace.blow",
+    "sounds": [
+      "furnacology:living_furnace_blow_sound"
+    ]
+  },
+  "block.living_furnace.wide_blow": {
+    "subtitle": "subtitles.furnacology.block.living_furnace.wide_blow",
+    "sounds": [
+      "furnacology:living_furnace_wide_blow_sound"
+    ]
+  },
+  "block.living_furnace.ember_strike": {
+    "subtitle": "subtitles.furnacology.block.living_furnace.ember_strike",
+    "sounds": [
+      "furnacology:living_furnace_ember_strike"
+    ]
+  }
+}

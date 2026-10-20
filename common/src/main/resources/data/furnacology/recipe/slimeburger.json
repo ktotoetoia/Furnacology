@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " B",
+    "SL",
+    " B"
+  ],
+  "key": {
+    "B": {
+      "item": "furnacology:coal_bun"
+    },
+    "L": {
+      "item": "furnacology:ground_living_ember"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "id": "furnacology:slimeburger",
+    "count": 1
+  }
+}

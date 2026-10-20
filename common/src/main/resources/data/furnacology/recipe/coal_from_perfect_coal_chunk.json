@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "furnacology:perfect_coal_chunk"
+    }
+  ],
+  "result": {
+    "id": "minecraft:coal",
+    "count": 2
+  }
+}

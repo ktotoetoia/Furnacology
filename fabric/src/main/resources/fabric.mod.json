@@ -7,30 +7,25 @@
     "authors": [
         "${mod_author}"
     ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
     "license": "${license}",
-    "icon": "${mod_id}.png",
     "environment": "*",
+    "accessWidener": "${mod_id}.accesswidener",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "com.im.FurnacologyFabric"
+        ],
+        "client": [
+            "com.im.FurnacologyFabricClient"
         ]
     },
     "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
+        "${mod_id}.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
+        "forgeconfigapiport": ">=${forgeconfigapiport_version}",
         "minecraft": "${minecraft_version}",
         "java": ">=${java_version}"
-    },
-    "suggests": {
-        "another-mod": "*"
     }
 }
-  

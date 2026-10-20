@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "B",
+    "L",
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "furnacology:coal_bun"
+    },
+    "L": {
+      "item": "furnacology:ground_living_ember"
+    }
+  },
+  "result": {
+    "id": "furnacology:coalburger",
+    "count": 1
+  }
+}

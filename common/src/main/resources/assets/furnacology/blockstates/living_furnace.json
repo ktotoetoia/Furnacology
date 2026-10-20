@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "facing=north,lit=false,skin=0": {
+      "model": "furnacology:block/living_furnace"
+    },
+    "facing=east,lit=false,skin=0": {
+      "model": "furnacology:block/living_furnace",
+      "y": 90
+    },
+    "facing=south,lit=false,skin=0": {
+      "model": "furnacology:block/living_furnace",
+      "y": 180
+    },
+    "facing=west,lit=false,skin=0": {
+      "model": "furnacology:block/living_furnace",
+      "y": 270
+    },
+    "facing=north,lit=true,skin=0": {
+      "model": "furnacology:block/living_furnace"
+    },
+    "facing=east,lit=true,skin=0": {
+      "model": "furnacology:block/living_furnace",
+      "y": 90
+    },
+    "facing=south,lit=true,skin=0": {
+      "model": "furnacology:block/living_furnace",
+      "y": 180
+    },
+    "facing=west,lit=true,skin=0": {
+      "model": "furnacology:block/living_furnace",
+      "y": 270
+    },
+    "facing=north,lit=false,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace"
+    },
+    "facing=east,lit=false,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace",
+      "y": 90
+    },
+    "facing=south,lit=false,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace",
+      "y": 180
+    },
+    "facing=west,lit=false,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace",
+      "y": 270
+    },
+    "facing=north,lit=true,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace"
+    },
+    "facing=east,lit=true,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace",
+      "y": 90
+    },
+    "facing=south,lit=true,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace",
+      "y": 180
+    },
+    "facing=west,lit=true,skin=1": {
+      "model": "furnacology:block/reinforced_living_furnace",
+      "y": 270
+    },
+    "facing=north,lit=false,skin=2": {
+      "model": "furnacology:block/ender_furnace"
+    },
+    "facing=east,lit=false,skin=2": {
+      "model": "furnacology:block/ender_furnace",
+      "y": 90
+    },
+    "facing=south,lit=false,skin=2": {
+      "model": "furnacology:block/ender_furnace",
+      "y": 180
+    },
+    "facing=west,lit=false,skin=2": {
+      "model": "furnacology:block/ender_furnace",
+      "y": 270
+    },
+    "facing=north,lit=true,skin=2": {
+      "model": "furnacology:block/ender_furnace"
+    },
+    "facing=east,lit=true,skin=2": {
+      "model": "furnacology:block/ender_furnace",
+      "y": 90
+    },
+    "facing=south,lit=true,skin=2": {
+      "model": "furnacology:block/ender_furnace",
+      "y": 180
+    },
+    "facing=west,lit=true,skin=2": {
+      "model": "furnacology:block/ender_furnace",
+      "y": 270
+    }
+  }
+}

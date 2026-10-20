@@ -19,6 +19,7 @@ build
 .gradle
 
 # other
+old
 eclipse
 run
 runs

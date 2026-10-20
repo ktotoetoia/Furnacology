@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "misc",
+  "ingredient": {
+    "item": "furnacology:perfect_coal_chunk"
+  },
+  "result": {
+    "id": "furnacology:living_ember"
+  },
+  "experience": 0.5,
+  "cookingtime": 100
+}

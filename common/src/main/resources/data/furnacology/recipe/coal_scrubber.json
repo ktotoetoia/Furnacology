@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "CCC",
+    "III"
+  ],
+  "key": {
+    "C": {
+      "item": "furnacology:perfect_coal_chunk"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "id": "furnacology:coal_scrubber",
+    "count": 1
+  }
+}

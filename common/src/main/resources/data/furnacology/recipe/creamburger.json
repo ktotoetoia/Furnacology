@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " B",
+    "ML",
+    " B"
+  ],
+  "key": {
+    "B": {
+      "item": "furnacology:coal_bun"
+    },
+    "L": {
+      "item": "furnacology:ground_living_ember"
+    },
+    "M": {
+      "item": "minecraft:magma_cream"
+    }
+  },
+  "result": {
+    "id": "furnacology:creamburger",
+    "count": 1
+  }
+}

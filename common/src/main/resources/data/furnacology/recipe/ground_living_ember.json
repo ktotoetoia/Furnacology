@@ -1,0 +1,15 @@
+{
+  "type": "furnacology:tool_shapeless",
+  "category": "misc",
+  "tool": {
+    "tag": "minecraft:axes"
+  },
+  "ingredients": [
+    {
+      "item": "furnacology:living_ember"
+    }
+  ],
+  "result": {
+    "id": "furnacology:ground_living_ember"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "furnacology:void_core"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "furnacology:blazing_core"
+    }
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "furnacology:void_core",
+        "furnacology:blazing_core"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "PBP",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:shulker_shell"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    },
+    "B": {
+      "item": "furnacology:blazing_core"
+    }
+  },
+  "result": {
+    "id": "furnacology:void_core",
+    "count": 1
+  }
+}

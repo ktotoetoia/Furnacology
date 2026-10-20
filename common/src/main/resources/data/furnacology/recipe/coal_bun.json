@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": {
+    "item": "furnacology:half_coal_dough"
+  },
+  "result": {
+    "id": "furnacology:coal_bun"
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

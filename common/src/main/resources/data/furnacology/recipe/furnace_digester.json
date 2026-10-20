@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "CSC",
+    "CKC"
+  ],
+  "key": {
+    "C": {
+      "tag": "c:cobblestones"
+    },
+    "E": {
+      "item": "furnacology:living_ember"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    },
+    "K": {
+      "item": "minecraft:composter"
+    }
+  },
+  "result": {
+    "id": "furnacology:furnace_digester",
+    "count": 1
+  }
+}

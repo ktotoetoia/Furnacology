@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "furnacology:half_coal_dough"
+    },
+    {
+      "item": "furnacology:half_coal_dough"
+    }
+  ],
+  "result": {
+    "id": "furnacology:coal_dough"
+  }
+}
