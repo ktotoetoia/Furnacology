@@ -32,13 +32,13 @@ public class ExperienceStorage implements IStateSerializable, IRemovedObserver
 
     public ExperienceStorage(ICompositeBlockEntity entity) { _entity = entity; }
 
-    public void onRemoved(ServerLevel level) { pop(level, Vec3.atCenterOf(_entity.getBlockPos())); }
+    public void onRemoved(ServerLevel level) { pop(level, Vec3.atCenterOf(_entity.getEntityPos())); }
     public void captureState(CompoundTag tag, HolderLookup.Provider registries) { tag.put(TagRecipesUsed, RecipesCodec.encodeStart(NbtOps.INSTANCE, _recipesUsed).getOrThrow()); }
 
     public void record(RecipeHolder<?> recipe)
     {
         _recipesUsed.merge(recipe.id(), 1, Integer::sum);
-        _entity.setChanged();
+        _entity.markEntityChanged();
     }
 
     public void award(Player player)
@@ -66,7 +66,7 @@ public class ExperienceStorage implements IStateSerializable, IRemovedObserver
         }));
 
         _recipesUsed.clear();
-        _entity.setChanged();
+        _entity.markEntityChanged();
         return recipes;
     }
 

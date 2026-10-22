@@ -62,7 +62,7 @@ public final class LivingFurnaceStateMachineFactory
         ActionState idle = new ActionState(new CooldownAction(furnace, CooldownPerTick), buffs, new IgniteAction(furnace),
                 new OccasionalClipAction(face, ClipDatabase.Idle, ()  -> IdleMinDelayTicks, () -> IdleMaxDelayTicks));
         ActionState lit = new ActionState(smelt, buffs, playFace(face, furnace, () -> ClipDatabase.Lit, true, () -> furnace.isSmelting() || furnace.hasPendingSmelt()),
-                new FrameSoundAction(face, BiteFrame, () ->  SoundDatabase.Bite, sounds, furnace::getCurrentSpeed, true, BiteFadeOutTicks), crumbs);
+                new FrameSoundAction(face, BiteFrame, () ->  SoundDatabase.Bite, sounds, () -> 1f/*Math.clamp(furnace.getCurrentSpeed(),0f,1.5f)*/, true, BiteFadeOutTicks), crumbs);
         ActionState smelted = new ActionState(IEntityAction.runOnEnter(furnace::acknowledgeSmelt), smelt, buffs,
                 playFace(face,furnace, () -> furnace.isEjecting() ? ClipDatabase.Throw : ClipDatabase.Smelt, false, () -> true),
                 new FrameSoundAction(face, SmeltSoundFrame, () -> furnace.isEjecting() ? SoundDatabase.Throw : SoundDatabase.Smelt, sounds, furnace::getCurrentSpeed, false , 0),

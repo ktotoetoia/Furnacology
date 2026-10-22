@@ -31,7 +31,7 @@ public class AuraEffectModifier implements IEffectModifier, ITickable
 
     public void tick()
     {
-        Level level = _target.getLevel();
+        Level level = _target.getEntityLevel();
         int every = Math.max(1, _interval.get());
 
         if (level == null||level.getGameTime() % every !=  0L) return;

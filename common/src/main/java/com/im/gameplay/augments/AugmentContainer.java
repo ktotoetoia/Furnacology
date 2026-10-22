@@ -84,7 +84,7 @@ public class AugmentContainer implements IPersistentSerializable, IHaveDrops
 
     private void markChanged()
     {
-        _entity.setChanged();
+        _entity.markEntityChanged();
         _entity.requestSync();
     }
 

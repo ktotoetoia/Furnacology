@@ -55,7 +55,7 @@ public class Digestion implements ITickable, IStateSerializable, IHaveDrops
         _digester = digester;
         _chargeTicks = chargeTicks;
         _digesting = digesting;
-        _food = new ItemSlots(1, (slot, stack) -> isDigesting() && !digest(stack).isEmpty(), entity::setChanged);
+        _food = new ItemSlots(1, (slot, stack) -> isDigesting() && !digest(stack).isEmpty(), entity::markEntityChanged);
     }
 
     public ItemSlots getFood() { return _food; }

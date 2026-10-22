@@ -34,13 +34,13 @@ public class BlastAbility implements IAbility
 
     @Override public void tick(ICompositeBlockEntity caster, int degree, float normalizedTime)
     {
-        Level level = caster.getLevel();
+        Level level = caster.getEntityLevel();
         Direction facing = caster.getFacing();
         float speed = _force.get() * degree;
         float hit = _damage.get() * degree;
         Vec3 away = new Vec3(facing.getStepX(), 0.0, facing.getStepZ());
         DamageSource fire = level.damageSources().inFire();
-        AirStream stream = AirStream.trace(level, caster.getBlockPos(), facing, _range.get(), _width.get(), StreamHeight);
+        AirStream stream = AirStream.trace(level, caster.getEntityPos(), facing, _range.get(), _width.get(), StreamHeight);
 
         if (!stream.isEmpty())
         {

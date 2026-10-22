@@ -21,6 +21,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -50,6 +51,12 @@ public class ComponentBlockEntity extends BlockEntity implements ICompositeBlock
     public void requestSync() {  _syncRequested = true; }
     public Direction getFacing() { return getBlockState().getOptionalValue(BlockStateProperties.HORIZONTAL_FACING).orElse(Direction.NORTH); }
     public WorldlyContainer getAccess() {  return get(WorldlyContainer.class); }
+
+    // Not named after the inherited BlockEntity methods: those get remapped in production, these don't.
+    public Level getEntityLevel() { return getLevel(); }
+    public BlockPos getEntityPos() { return getBlockPos(); }
+    public boolean isEntityRemoved() { return isRemoved(); }
+    public void markEntityChanged() { setChanged(); }
 
     public void dropItem(ItemStack stack)
     {

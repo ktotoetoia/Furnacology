@@ -113,7 +113,7 @@ public class Furnace implements IStateSerializable, ISyncSerializable
 
     public RecipeHolder<SmeltingRecipe> findRecipe()
     {
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
         ItemStack input = _items.getItem(InputSlot);
 
         if (level == null || input.isEmpty()) return null;
@@ -189,7 +189,7 @@ public class Furnace implements IStateSerializable, ISyncSerializable
 
     private void deliver(ItemStack result)
     {
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
 
         if (level != null && level.getRandom().nextFloat() < _doubleChance.getFinalValue())
         {
@@ -204,18 +204,18 @@ public class Furnace implements IStateSerializable, ISyncSerializable
 
     private void eject(ItemStack stack)
     {
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
         if (level == null) return;
 
         Vec3 out = Vec3.atLowerCornerOf(_entity.getFacing().getNormal());
-        Vec3 start = Vec3.atBottomCenterOf(_entity.getBlockPos()).add(out.scale(EjectDistance)).add(0.0, EjectHeight, 0.0);
+        Vec3 start = Vec3.atBottomCenterOf(_entity.getEntityPos()).add(out.scale(EjectDistance)).add(0.0, EjectHeight, 0.0);
         ItemEntity item = new ItemEntity(level, start.x, start.y, start.z, stack, out.x * EjectSpeed, EjectLift, out.z * EjectSpeed);
 
         item.setDefaultPickUpDelay();
         level.addFreshEntity(item);
     }
 
-    private ItemStack getResultOf(SmeltingRecipe recipe) { return recipe.assemble(new SingleRecipeInput(_items.getItem(InputSlot)), _entity.getLevel().registryAccess()); }
+    private ItemStack getResultOf(SmeltingRecipe recipe) { return recipe.assemble(new SingleRecipeInput(_items.getItem(InputSlot)), _entity.getEntityLevel().registryAccess()); }
 
     private boolean canOutputAccept(ItemStack result)
     {
@@ -225,7 +225,7 @@ public class Furnace implements IStateSerializable, ISyncSerializable
 
     private boolean canSmelt(ItemStack stack)
     {
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
         return level != null && !stack.isEmpty() && _recipes.getRecipeFor(new SingleRecipeInput(stack), level).isPresent();
     }
 
@@ -242,7 +242,7 @@ public class Furnace implements IStateSerializable, ISyncSerializable
     private void onItemsChanged()
     {
         Item input = _items.getItem(InputSlot).getItem();
-        _entity.setChanged();
+        _entity.markEntityChanged();
         if (input == _lastInput) return;
         _lastInput = input;
         _entity.requestSync();

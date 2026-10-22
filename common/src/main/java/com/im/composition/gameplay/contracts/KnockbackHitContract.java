@@ -14,7 +14,7 @@ public class KnockbackHitContract implements IHitContract
     public void onHit(ICompositeBlockEntity source, List<LivingEntity> hits)
     {
         float push = _strength.get();
-        Vec3 origin = Vec3.atCenterOf(source.getBlockPos());
+        Vec3 origin = Vec3.atCenterOf(source.getEntityPos());
 
         if (push <= 0.0f) return;
 

@@ -44,7 +44,7 @@ public class SoundEmitter implements ISyncSerializable
         SoundEvent sound = _enabled.test(tag) ? _sounds.get().getRandom(tag, _random) : null;
 
         if (sound != null)
-            getPlayer().play(sound, _entity.getBlockPos(), rate, whileLoaded(playing), fadeOutTicks);
+            getPlayer().play(sound, _entity.getEntityPos(), rate, whileLoaded(playing), fadeOutTicks);
     }
 
     public void loop(Tag<SoundEvent> tag, BooleanSupplier playing, int fadeInTicks, int fadeOutTicks)
@@ -52,7 +52,7 @@ public class SoundEmitter implements ISyncSerializable
         SoundEvent sound = _enabled.test(tag) ? _sounds.get().getRandom(tag, _random) : null;
 
         if (sound != null)
-            getPlayer().loop(sound, _entity.getBlockPos(), whileLoaded(playing), fadeInTicks, fadeOutTicks);
+            getPlayer().loop(sound, _entity.getEntityPos(), whileLoaded(playing), fadeInTicks, fadeOutTicks);
     }
 
     public void cue(Tag<SoundEvent> tag)
@@ -100,9 +100,9 @@ public class SoundEmitter implements ISyncSerializable
 
         if (_cueSound == null ||!_cueGroup.isEmpty() && !_enabled.test(new Tag<>(_cueGroup))) return;
 
-        getPlayer().play(SoundEvent.createVariableRangeEvent(_cueSound), _entity.getBlockPos(), _cuePitch, whileLoaded(() -> true), 0);
+        getPlayer().play(SoundEvent.createVariableRangeEvent(_cueSound), _entity.getEntityPos(), _cuePitch, whileLoaded(() -> true), 0);
     }
 
-    private ISoundPlayer getPlayer() { return SoundPlayers.forLevel(_entity.getLevel()); }
-    private BooleanSupplier whileLoaded(BooleanSupplier playing) { return () -> playing.getAsBoolean() && !_entity.isRemoved(); }
+    private ISoundPlayer getPlayer() { return SoundPlayers.forLevel(_entity.getEntityLevel()); }
+    private BooleanSupplier whileLoaded(BooleanSupplier playing) { return () -> playing.getAsBoolean() && !_entity.isEntityRemoved(); }
 }

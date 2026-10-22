@@ -52,7 +52,7 @@ public class SkinSelector<T extends ISkin> implements IPersistentSerializable
         int next = isAutomatic() ? 0 : available.indexOf(_chosen) + 1;
 
         _chosen = next < available.size() ? available.get(next) : Automatic;
-        _entity.setChanged();
+        _entity.markEntityChanged();
         _entity.requestSync();
         return getCurrent();
     }

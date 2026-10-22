@@ -35,14 +35,18 @@ import java.util.function.ToIntFunction;
 
 public final class LivingFurnaceDocument
 {
+    //top y = 17
+    //bottom y = 53
+    //mid y = 35
+
     private static final int InputX = 56, InputY = 17, InputPriority = 3;
     private static final int FuelX = 56, FuelY = 53, FuelPriority = 1;
-    private static final int FoodX = 30, FoodY = 53, FoodPriority = 2;
+    private static final int FoodX = 30, FoodY = 35, FoodPriority = 2;
     private static final int OutputX = 116, OutputY = 35;
     private static final int CookX = 79, CookY = 35;
     private static final int FlameX = 57, FlameY = 37;
-    private static final int BuffFlameX = 11, BuffFlameY = 55;
-    private static final int FoodSlotX = 11, FoodSlotY = 52;
+    private static final int BuffFlameX = 10, BuffFlameY = 34+2;
+    private static final int FoodSlotX = 9, FoodSlotY = 34;
     private static final int SpeedLabelX = 153, SpeedLabelY = 6;
     private static final GuiArea SpeedToggle = new GuiArea(156, 4, 12, 12);
     private static final int SpeedPanelPadding = 4;

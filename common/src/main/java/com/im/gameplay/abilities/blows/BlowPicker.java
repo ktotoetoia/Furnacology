@@ -56,14 +56,14 @@ public class BlowPicker implements ISyncSerializable
     public void spray(ToDoubleFunction<Vec3> reach)
     {
         BlowParticles particles = getCurrent().particles();
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
         ParticleSet set = particles == null || level == null ? null : _particles.get().getRandom(particles.set(), _random);
 
         if (set == null) return;
 
         for (int band = 0;  band < Math.min(particles.bands().size(), set.sizes().size()); band++)
         {
-            _sprayer.spray(level, _entity.getBlockPos(), _entity.getFacing(), particles.across(), particles.height(), particles.bands().get(band), set.sizes().get(band), reach);
+            _sprayer.spray(level, _entity.getEntityPos(), _entity.getFacing(), particles.across(), particles.height(), particles.bands().get(band), set.sizes().get(band), reach);
         }
     }
 }

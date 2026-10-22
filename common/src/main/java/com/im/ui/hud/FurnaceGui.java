@@ -18,11 +18,11 @@ public record FurnaceGui(GuiSprite background, GuiSprite cookProgress, GuiSprite
                 getSprite(block, "background", 176, 166, fallback, FurnaceGui::background),
                 getSprite(block, "cook_progress", 24, 17, fallback, FurnaceGui::cookProgress),
                 getSprite(block, "fuel_remaining", 14, 12, fallback, FurnaceGui::fuelRemaining),
-                getSprite(block, "buff_remaining", 15, 15, fallback, FurnaceGui::buffRemaining),
-                getSprite(block, "buff_charge", 15, 15, fallback, FurnaceGui::buffCharge),
+                getSprite(block, "buff_remaining", 13, 14, fallback, FurnaceGui::buffRemaining),
+                getSprite(block, "buff_charge", 13, 14, fallback, FurnaceGui::buffCharge),
                 getSprite(block, "speed_panel", 50, 166, fallback, FurnaceGui::speedPanel),
                 getSprite(block, "instant_buff_panel", 32, 166, fallback, FurnaceGui::instantPanel),
-                getSprite(block, "food_slot", 36, 18, fallback, FurnaceGui::foodSlot));
+                getSprite(block, "food_slot", 38, 18, fallback, FurnaceGui::foodSlot));
     }
 
     private static GuiSprite getSprite(String block, String name, int width, int height, @Nullable FurnaceGui fallback, Function<FurnaceGui, GuiSprite> same)

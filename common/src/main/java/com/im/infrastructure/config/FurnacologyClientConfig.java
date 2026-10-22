@@ -19,7 +19,7 @@ public final class FurnacologyClientConfig
 
         builder.push("sounds");
 
-        SoundRange = builder.comment("Blocks away a furnace can still be heard from.").defineInRange("range", 6.0, 2.0, 128.0);
+        SoundRange = builder.comment("Blocks away a furnace can still be heard from.").defineInRange("range", 12.0, 2.0, 128.0);
         SoundFalloff = builder.comment("Sound falloff").defineInRange("falloff", 0, 0.0, 30.0);
         SoundSpeedPitch = builder.comment("How much a faster furnace also speeds up its chewing and smelting sounds. 1 plays them as much")
                 .defineInRange("speedPitch", 1.0, 0.0, 2.0);

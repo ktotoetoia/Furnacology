@@ -23,11 +23,11 @@ public class Area implements IArea
     }
 
     public IScalingValue getRadius() { return _radius; }
-    public AABB getBounds() { return new AABB(_entity.getBlockPos()).inflate(_radius.getFinalValue()); }
+    public AABB getBounds() { return new AABB(_entity.getEntityPos()).inflate(_radius.getFinalValue()); }
 
     public <T extends Entity> List<T> getEntities(Class<T> type, Predicate<? super T> filter)
     {
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
         return level == null ? List.of() : level.getEntitiesOfClass(type, getBounds(), filter);
     }
 }

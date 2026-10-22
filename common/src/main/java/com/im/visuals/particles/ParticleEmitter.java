@@ -26,22 +26,22 @@ public class ParticleEmitter
 
     public void emit(ParticleOptions particle, Vec3 offset, Vec3 velocity)
     {
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
 
         if (level == null || !level.isClientSide()) return;
 
-        Vec3 position = Vec3.atCenterOf(_entity.getBlockPos()).add(offset);
+        Vec3 position = Vec3.atCenterOf(_entity.getEntityPos()).add(offset);
         level.addParticle(particle, position.x, position.y, position.z, velocity.x, velocity.y, velocity.z);
     }
 
     public void streak(Tag<ParticleSet> tag, Vec3 target, ParticleStreak streak)
     {
-        Level level = _entity.getLevel();
+        Level level = _entity.getEntityLevel();
         ParticleSet set =  _library.get().getRandom(tag, _random);
 
         if (level == null ||  set == null) return;
 
-        streak.emit(level, set, getSurfaceToward(Vec3.atCenterOf(_entity.getBlockPos()), target), target, _random);
+        streak.emit(level, set, getSurfaceToward(Vec3.atCenterOf(_entity.getEntityPos()), target), target, _random);
     }
 
     private static Vec3 getSurfaceToward(Vec3 center, Vec3 target)

@@ -32,7 +32,7 @@ public class AreaDamageSmeltContract implements ISmeltContract
     public void onSmelted(ICompositeBlockEntity furnace)
     {
         float amount = _damage.get();
-        Level level = furnace.getLevel();
+        Level level = furnace.getEntityLevel();
         IArea area = furnace.get(IArea.class);
 
         if (amount <= 0.0f || level == null || area == null) return;

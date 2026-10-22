@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 public interface ICompositeBlockEntity extends ITypeRegistry<Object>
 {
-    @Nullable Level getLevel();
-    BlockPos getBlockPos();
+    @Nullable Level getEntityLevel();
+    BlockPos getEntityPos();
     Direction getFacing();
     boolean isServer();
-    boolean isRemoved();
+    boolean isEntityRemoved();
     void requestSync();
-    void setChanged();
+    void markEntityChanged();
     void dropItem(ItemStack stack);
 }
